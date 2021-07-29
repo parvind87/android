@@ -1,0 +1,30 @@
+com/example/android/common/logger/LogNode.java
+ com.example.android.common.logger.LogNode
+com/example/android/recyclerview/MainActivity.java
+ com.example.android.recyclerview.MainActivity
+com/example/android/common/logger/Log.java
+ com.example.android.common.logger.Log
+com/example/android/recyclerview/CustomAdapter.java
+ com.example.android.recyclerview.CustomAdapter
+ com.example.android.recyclerview.CustomAdapter$ViewHolder
+ com.example.android.recyclerview.CustomAdapter$ViewHolder$1
+com/example/android/common/logger/LogView.java
+ com.example.android.common.logger.LogView
+ com.example.android.common.logger.LogView$1
+com/example/android/recyclerview/RecyclerViewFragment.java
+ com.example.android.recyclerview.RecyclerViewFragment
+ com.example.android.recyclerview.RecyclerViewFragment$1
+ com.example.android.recyclerview.RecyclerViewFragment$2
+ com.example.android.recyclerview.RecyclerViewFragment$3
+ com.example.android.recyclerview.RecyclerViewFragment$LayoutManagerType
+com/example/android/recyclerview/BuildConfig.java
+ com.example.android.recyclerview.BuildConfig
+com/example/android/common/logger/LogFragment.java
+ com.example.android.common.logger.LogFragment
+ com.example.android.common.logger.LogFragment$1
+com/example/android/common/activities/SampleActivityBase.java
+ com.example.android.common.activities.SampleActivityBase
+com/example/android/common/logger/LogWrapper.java
+ com.example.android.common.logger.LogWrapper
+com/example/android/common/logger/MessageOnlyLogFilter.java
+ com.example.android.common.logger.MessageOnlyLogFilter
