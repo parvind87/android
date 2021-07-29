@@ -7,6 +7,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.Toast;
@@ -15,12 +16,17 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity    {
 Spinner spinner;
+GridView view;
+ArrayList studentList;
+ArrayAdapter adapter;
 ArrayList allStates = new ArrayList();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
       //  spinner.setOnTouchListener(this);
+        view = findViewById(R.id.mygrid);
+        studentList = new ArrayList();
 
         spinner = (Spinner) findViewById(R.id.sp_state);
         allStates.add("Bihar");

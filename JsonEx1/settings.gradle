@@ -1,0 +1,2 @@
+rootProject.name = "JsonEx1"
+include ':app'
