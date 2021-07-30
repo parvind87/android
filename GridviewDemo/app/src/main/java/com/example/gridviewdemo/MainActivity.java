@@ -11,6 +11,8 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -46,17 +48,18 @@ ArrayAdapter adapter;
 
         adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,studentsList);
         gridView.setAdapter(adapter);
-        img =findViewById(R.id.img);
+     //   img =findViewById(R.id.img);
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
            //      Toast.makeText(MainActivity.this, (Integer) studentsList.get(position), Toast.LENGTH_SHORT).show();
              img.setImageResource(myImageList.get(position));
-//             if(position==7){
-//                 Intent intent = new Intent(this, ListviewDemo.class);
-//                 startActivity(intent);
-//             }
+              //  ImageView imageView = (ImageView) findViewById(R.id.my_image_view);
+                img =findViewById(R.id.img);
+
+              //  Glide.with(this).load("http://goo.gl/gEgYUd").into(img);
+
 
             }
         });
