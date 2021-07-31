@@ -4,15 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Customlistview extends AppCompatActivity {
-
+TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customlistview);
         Toast.makeText(this, "onCreate", Toast.LENGTH_SHORT).show();
+        textView = findViewById(R.id.textView);
+        String name = getIntent().getExtras().getString("fname");
+        String lname = getIntent().getExtras().getString("lname");
+        textView.setText(name+lname);
 
     }
     @Override

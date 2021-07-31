@@ -53,12 +53,13 @@ ArrayAdapter adapter;
             @Override
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
+
            //      Toast.makeText(MainActivity.this, (Integer) studentsList.get(position), Toast.LENGTH_SHORT).show();
-             img.setImageResource(myImageList.get(position));
+           //  img.setImageResource(myImageList.get(position));
               //  ImageView imageView = (ImageView) findViewById(R.id.my_image_view);
                 img =findViewById(R.id.img);
 
-              //  Glide.with(this).load("http://goo.gl/gEgYUd").into(img);
+              //  Glide.with(v).load("http://goo.gl/gEgYUd").into(img);
 
 
             }

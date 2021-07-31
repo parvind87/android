@@ -8,13 +8,16 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class ListviewDemo extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemClickListener {
     ListView listView;
     Button btn,btn1;
+    EditText fname;
     //private String states;
     String[] states = {"Bihar","Delhi", "UP","Haryana","Maharastra"};
     @Override
@@ -25,6 +28,7 @@ public class ListviewDemo extends AppCompatActivity implements View.OnClickListe
         btn = findViewById(R.id.btn);
         btn.setOnClickListener(this);
         btn1 = findViewById(R.id.btn1);
+
         btn1.setOnClickListener(this);
         listView=findViewById(R.id.listview);
         ArrayAdapter arrayAdapter= new ArrayAdapter(this,
@@ -42,7 +46,11 @@ public class ListviewDemo extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.btn1:
+                fname = findViewById(R.id.fname);
+                String f_name = fname.getText().toString();
                 Intent intent1 = new Intent(this, Customlistview.class);
+                intent1.putExtra("fname",f_name);
+                intent1.putExtra("lname","Kumar");
                 startActivity(intent1);
                 break;
         }

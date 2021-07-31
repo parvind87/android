@@ -24,7 +24,8 @@ import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static String JSON_URL = "https://run.mocky.io/v3/f642d597-767d-4845-a2d8-c893249dfd50";
+    //private static String JSON_URL = "https://run.mocky.io/v3/f642d597-767d-4845-a2d8-c893249dfd50";
+    private static String JSON_URL = "https://dev-i10.pantheonsite.io/jsonapi/node/news";
 
     String title, age;
 
@@ -89,12 +90,12 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 JSONObject jsonObject = new JSONObject(s);
-                JSONArray jsonArray1 = jsonObject.getJSONArray("Friends");
+                JSONArray jsonArray1 = jsonObject.getJSONArray("data");
 
                  for (int i =0 ; i< jsonArray1.length() ; i++) {
                      JSONObject jsonObject1 = jsonArray1.getJSONObject(i);
-                     title = jsonObject1.getString("name");
-                     age = jsonObject1.getString("age");
+                     title = jsonObject1.getString("type");
+                     age = jsonObject1.getString("id");
                      Log.v("data", title);
 
                      // tmp hash map for single contact
