@@ -13,7 +13,8 @@ MyReceiver myReceiver;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        filter = new IntentFilter(Intent.ACTION_TIME_TICK);
+        //filter = new IntentFilter(Intent.ACTION_TIME_TICK);
+        filter = new IntentFilter(Intent.ACTION_HEADSET_PLUG);
         myReceiver = new MyReceiver();
     }
 
