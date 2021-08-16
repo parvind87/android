@@ -1,5 +1,4 @@
 package com.iforbihar.sqlliteex;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -52,6 +51,18 @@ public class Helper extends SQLiteOpenHelper {
             database=getReadableDatabase();
             String[] columns=new String[]{name,contact};
             cursor=database.query(tableName,columns,null,null,null,null,null);
+        }catch (Exception ex){
+            Log.i("sqlite_error",ex.getMessage());
+        }
+        return cursor;
+    }
+
+    public Cursor searchData(String param) {
+        Cursor cursor=null;
+        try{
+            database=getReadableDatabase();
+            String[] columns=new String[]{name,contact};
+            cursor=database.query(tableName,columns,contact+"=?",new String[]{param},null,null,null);
         }catch (Exception ex){
             Log.i("sqlite_error",ex.getMessage());
         }

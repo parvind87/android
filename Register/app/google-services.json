@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "625143659328",
+    "project_id": "register-adf9f",
+    "storage_bucket": "register-adf9f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:625143659328:android:379d4bf0f50b0eeadd58a5",
+        "android_client_info": {
+          "package_name": "com.ps.register"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "625143659328-id24dcalcpn81m1cp160d69eeivfr68q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7dGg7xsttlLna0Iq1il0rPp8c_EsulyA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "625143659328-id24dcalcpn81m1cp160d69eeivfr68q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

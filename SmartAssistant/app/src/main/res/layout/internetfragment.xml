@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/homeview"
+    android:layout_margin="2dp"
+    android:fitsSystemWindows="true"
+    android:padding="2dp"
+    android:text="Content goes here for Internet"
+    android:gravity="center">
+</TextView>
+</RelativeLayout>
