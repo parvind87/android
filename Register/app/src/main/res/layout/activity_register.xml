@@ -70,35 +70,48 @@
 
     <EditText
         android:id="@+id/txtPhone"
-        android:padding="10dp"
-        android:textSize="13dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Phone"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:padding="10dp"
+        android:textSize="13dp"
         app:layout_constraintBottom_toTopOf="@id/btnRegister"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
 
-        app:layout_constraintTop_toBottomOf="@id/txtEmail" />
+        app:layout_constraintTop_toBottomOf="@id/txtEmail"
+        app:layout_constraintVertical_bias="0.51" />
 
     <Button
         android:id="@+id/btnRegister"
-        android:padding="10dp"
-        android:textSize="13dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:padding="10dp"
         android:text="Register"
-        tools:layout_editor_absoluteX="63dp"
-        tools:layout_editor_absoluteY="121dp"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toTopOf="@id/tvLoginLink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtPhone"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/txtPhone" />
 
-
+    <TextView
+        android:id="@+id/tvLoginLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="gotoLogin"
+        android:text="Already registered, click here to Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

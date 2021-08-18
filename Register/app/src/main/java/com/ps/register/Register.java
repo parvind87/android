@@ -12,14 +12,22 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Register extends AppCompatActivity implements View.OnClickListener {
 EditText fullName,phone,email,password;
 Button register;
 FirebaseAuth fAuth;
+FirebaseFirestore fStore;
+String userId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +41,7 @@ FirebaseAuth fAuth;
         register.setOnClickListener(this);
 
         fAuth=FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
         if(fAuth.getCurrentUser()!=null){
             startActivity(new Intent(getApplicationContext(),MainActivity.class));
             finish();
@@ -65,6 +74,19 @@ FirebaseAuth fAuth;
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+                    userId = fAuth.getCurrentUser().getUid();
+                    DocumentReference documentReference = fStore.collection("users").document(userId);
+                    Map<String,Object> user = new HashMap<>();
+                    user.put("fname",vFullname);
+                    user.put("phone",vPhone);
+                    user.put("email",vEmail);
+                    documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            Toast.makeText(Register.this, "User profile created Successfully", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
                     Toast.makeText(Register.this, "User created Successfully", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(getApplicationContext(),MainActivity.class));
                 }else{
@@ -76,4 +98,8 @@ FirebaseAuth fAuth;
     }
 
 
+    public void gotoLogin(View view) {
+        startActivity(new Intent(getApplicationContext(),Login.class));
+        finish();
+    }
 }
